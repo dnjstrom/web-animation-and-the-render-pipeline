@@ -1,7 +1,6 @@
 import {
   Deck,
   SlideLayout,
-  Image,
   FullScreen,
   AnimatedProgress,
   Markdown,
@@ -14,6 +13,16 @@ import { Performant } from "./Performant";
 import { GrowButton } from "./GrowButton";
 import styled from "styled-components";
 import { ShadowButton } from "./ShadowButton";
+import Image from "next/image";
+import animation from "components/animation.png";
+import cssOverview from "components/css-overview.png";
+import layerBorders from "components/layer-borders.png";
+import layers from "components/layers.png";
+import layoutShiftRegions from "components/layout-shift-regions.png";
+import paintFlashing from "components/paint-flashing.png";
+import performance from "components/performance.png";
+import performance2 from "components/performance2.png";
+import theRenderPipeline from "components/the-render-pipeline.png";
 
 export const Slides = () => (
   <Deck
@@ -83,7 +92,14 @@ export const Slides = () => (
     </SlideLayout.Center>
 
     <SlideLayout.Statement>
-      <Image src="/the-render-pipeline.png" maxWidth="80%"></Image>
+      <Image
+        src={theRenderPipeline}
+        alt=""
+        style={{
+          maxWidth: "80%",
+          maxHeight: "80%",
+        }}
+      ></Image>
     </SlideLayout.Statement>
 
     <SlideLayout.Section>Script</SlideLayout.Section>
@@ -106,7 +122,7 @@ export const Slides = () => (
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/performance.png"></Image>
+        <Image alt="" width={800} src={performance}></Image>
         <Text textAlign="center">Performance tab</Text>
       </FlexBox>
     </SlideLayout.Center>
@@ -124,7 +140,7 @@ export const Slides = () => (
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/css-overview.png"></Image>
+        <Image alt="" width={800} src={cssOverview}></Image>
         <Text textAlign="center">CSS Overview tab</Text>
       </FlexBox>
     </SlideLayout.Center>
@@ -140,7 +156,7 @@ export const Slides = () => (
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/layout-shift-regions.png"></Image>
+        <Image alt="" width={800} src={layoutShiftRegions}></Image>
         <Text textAlign="center">Rendering tab</Text>
       </FlexBox>
     </SlideLayout.Center>
@@ -155,7 +171,7 @@ export const Slides = () => (
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/paint-flasing.png"></Image>
+        <Image alt="" width={800} src={paintFlashing}></Image>
         <Text textAlign="center">Rendering tab</Text>
       </FlexBox>
     </SlideLayout.Center>
@@ -168,28 +184,28 @@ export const Slides = () => (
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/layers.png"></Image>
+        <Image alt="" width={800} src={layers}></Image>
         <Text textAlign="center">Layers tab</Text>
       </FlexBox>
     </SlideLayout.Center>
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/layer-borders.png"></Image>
+        <Image alt="" width={800} src={layerBorders}></Image>
         <Text textAlign="center">Rendering tab</Text>
       </FlexBox>
     </SlideLayout.Center>
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/performance2.png"></Image>
+        <Image alt="" width={800} src={performance2}></Image>
         <Text textAlign="center">Performance tab</Text>
       </FlexBox>
     </SlideLayout.Center>
 
     <SlideLayout.Center>
       <FlexBox flexDirection="column">
-        <Image width="800px" src="/animation.png"></Image>
+        <Image alt="" width={800} src={animation}></Image>
         <Text textAlign="center">Animation tab</Text>
       </FlexBox>
     </SlideLayout.Center>
